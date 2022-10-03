@@ -5,7 +5,7 @@ FactoryBot.define do
   sequence :email do |n|
     "person#{n}@gmail.com"
   end
-  sequence :expired_at do |n|
+  sequence :expired_at do |_n|
     Date.today
   end
 end
