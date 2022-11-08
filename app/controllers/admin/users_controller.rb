@@ -1,9 +1,15 @@
 class Admin::UsersController < ApplicationController
   include AuthHelper
   before_action :authenticate_user!, :authorize
+  helper_method :current_user
 
   def show
     @user = User.find(params[:id])
+  end
+
+  def index
+    @q = User.ransack(params[:q])
+    @users = @q.result.order(:type).order(:id).page(params[:page]).per(10)
   end
 
   def authorize
