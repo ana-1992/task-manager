@@ -25,7 +25,10 @@ gem 'state_machines-activerecord'
 gem 'slim-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'kaminari'
+gem 'ransack'
+gem 'responders'
+gem 'active_model_serializers'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
